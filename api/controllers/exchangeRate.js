@@ -1,6 +1,10 @@
-exports.get_exchangeRate = (req, res, next) => {
+const ExchangeRate = require('../models/exchangeRate');
 
-    const valueToExcenge = req.params.valueToExcenge;
+exports.get_exchangeRate = async (req, res, next) => {
 
-    res.status(200).json(valueToExcenge);   
+    const exchangeRate = new ExchangeRate(req.params.valueToExcenge,req.params.currency);
+
+    const {data} = await exchangeRate.callExchangerValue();
+
+    res.status(200).json(data);   
 }

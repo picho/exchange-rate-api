@@ -1,5 +1,7 @@
 {
     "env": {
-        "PORT": 3050
+        "PORT": 3050,
+        "URL_EXCHANGE_ENDPOINT": "https://api.apilayer.com/exchangerates_data/convert",
+        "API_KEY_EXCHANGE_ENDPOINT": "ZLXDVRU0riUfsqVppu82mkl58arh2mG3"
     }
 }
