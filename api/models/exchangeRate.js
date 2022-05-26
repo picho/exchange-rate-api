@@ -10,15 +10,6 @@ module.exports = class exchangeRate {
     // Método
     async callExchangerValue () {
 
-        // const options = {
-        //     method: 'GET',
-        //     url: process.env.URL_EXCHANGE_ENDPOINT,
-        //     params: {to: 'USD', from: this.currency, amount: this.valueToExchenge},
-        //     headers: {
-        //       'apikey': process.env.API_KEY_EXCHANGE_ENDPOINT
-        //     }
-        //   };
-
           const config = {
             headers: { 'apikey': process.env.API_KEY_EXCHANGE_ENDPOINT },
             params: {
@@ -29,13 +20,6 @@ module.exports = class exchangeRate {
           }
 
           return await axios.get(process.env.URL_EXCHANGE_ENDPOINT, config);
-          
-          
-          // axios.request(options).then(function (response) {
-          //     console.log(response.data);
-          // }).catch(function (error) {
-          //     console.error(error);
-          // });
     }
 }
 
