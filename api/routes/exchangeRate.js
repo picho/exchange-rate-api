@@ -1,10 +1,8 @@
 const express = require('express');
 const router = express.Router();
 
-const pricesControllers = require('../controllers/exchangeRate');
+const exchangeRateControllers = require('../controllers/exchangeRate');
 
-
-router.get('/:valueToExcenge&:currency', pricesControllers.get_exchangeRate);
-
+router.get('/:valueToExcenge&:currency', exchangeRateControllers.get_exchangeRate);
 
 module.exports = router;

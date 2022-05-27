@@ -2,10 +2,19 @@ const express = require('express');
 const app = express();
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
-
+const mongoose = require('mongoose');
 const fs = require('fs');
 
 const exchangeRateRouter = require('./api/routes/exchangeRate');
+const currencyRouter = require('./api/routes/currency');
+
+const connectionString = `mongodb+srv://${process.env.MONGO_USERNAME}:${process.env.MONGO_PASSWORD}@pich.2qahw.mongodb.net/?retryWrites=true&w=majority`;
+
+mongoose.connect(connectionString);
+
+const db = mongoose.connection;
+db.on("error", () => console.log("Database connection error"));
+db.once("open", () => console.log("database connection success"));
 
 app.use(morgan('common', {
     stream: fs.createWriteStream('./log/accessLog/access.log', {flags: 'a'})
@@ -32,6 +41,7 @@ app.use((req, res, next) => {
 });
 
 app.use('/exchangeRate', exchangeRateRouter);
+app.use('/currency', currencyRouter);
 
 //Error handler when a router was not hit (Not found)
 app.use((req, res, next) => {
