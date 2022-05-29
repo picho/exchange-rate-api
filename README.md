@@ -9,7 +9,7 @@ Use the following steps to make this app work.
 1. Clone this repository or download it.
 2. Put the app in a folder.
 3. Using a terminal or cmd, go to the folder.
-4. Being in the folder, write ```npm install``` and press enter. Wait until all the packages are installed.
+4. Once in the folder, write ```npm install``` and press enter. Wait until all the packages are installed.
 5. Once the installation is finished, write ```npm start``` and press enter.
 
 When the app is running, if everything is ok, you should see the following message.
@@ -33,7 +33,7 @@ This API has two routes and you should use the http protocols to call their endp
 
 ### exchangeRate
 
-This route only has one endpoint. It has to be called with the http protocol ```get```, passing two values, a number (price value that is going to change with the exchange rate value) and a string (which represents a currency that has a corresponding rate that is going to change the price).
+This route only has one endpoint. It has to be called with the http protocol ```get```, sending two values, a number (price value that is going to change with the exchange rate value) and a string (which represents a currency that has a corresponding rate that is going to change the price).
 
 ### currency
 
