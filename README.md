@@ -1,16 +1,16 @@
 # exchange-rate-api
 
-This back-end app is meant to cover all the functionalities that ArcelorMittal's exercise asked. Its focus is to provied a way to apply a rate value to another value.
+This back-end app is meant to cover all the required functionalities described in ArcelorMittal's case study. Its focus is to provide a way to apply an exchange rate to a given value.
 
 ## Installation
 
-Use the following steps to make work this app.
+Use the following steps to make this app work.
 
 1. Clone this repository or download it.
 2. Put the app in a folder.
-3. Using a terminal o cmd, go to the folder.
-4. Being in the folder, write npm install and press enter, wait until all the packages are installed
-5. Once the installation is finished, write npm start and press enter.
+3. Using a terminal or cmd, go to the folder.
+4. Being in the folder, write ```npm install``` and press enter. Wait until all the packages are installed.
+5. Once the installation is finished, write ```npm start``` and press enter.
 
 When the app is running, if everything is ok, you should see the following message.
 
@@ -29,14 +29,14 @@ database connection success
 
 ## Components
 
-This api has two routes and you should you the http protocal to call their endpoints. the rountes are **exchangeRate** and **currency**
+This API has two routes and you should use the http protocols to call their endpoints. The rountes are **exchangeRate** and **currency**.
 
 ### exchangeRate
 
-This route only has one endpoint, it has to be call with the http protocol get, passing two values, a number (price value that is going to change applying a rate value) and a string (the string represents a currency that has a rate that is going to change a price).
+This route only has one endpoint. It has to be called with the http protocol ```get```, passing two values, a number (price value that is going to change with the exchange rate value) and a string (which represents a currency that has a corresponding rate that is going to change the price).
 
 ### currency
 
-This route only has one endpoint, it has to be call with the http protocol get, this endpoint is going to call repository that has all the currency avialable in this project.
+This route only has one endpoint, it has to be called with the http protocol ```get```. This endpoint is going to call the repository that has all the available currencies.
 
 
