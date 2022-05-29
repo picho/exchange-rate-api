@@ -1,5 +1,7 @@
 # exchange-rate-api
 
+This back-end app is meant to cover all the functionalities that ArcelorMittal's exercise asked. Its focus is to provied a way to apply a rate value to another value.
+
 ## Installation
 
 Use the following steps to make work this app.
